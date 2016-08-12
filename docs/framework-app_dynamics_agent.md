@@ -17,14 +17,14 @@ When binding AppDynamics using a user-provided service, it must have name or tag
 
 | Name | Description
 | ---- | -----------
-| `account-access-key` | (Optional) The account access key to use when authenticating with the controller
-| `account-name` | (Optional) The account name to use when authenticating with the controller
-| `application-name` | (Optional) the applicationa's name
-| `host-name` | The controller host name
+| `account-access-key` | (Mandatory) The account access key to use when authenticating with the controller
+| `account-name` | (Mandatory) The account name to use when authenticating with the controller
+| `application-name` | (Mandatory) the applicationa's name
+| `host-name` | (Mandatory) The controller host name
 | `node-name` | (Optional) the application's node name
-| `port` | (Optional) The controller port
-| `ssl-enabled` | (Optional) Whether or not to use an SSL connection to the controller
-| `tier-name` | (Optional) the application's tier name
+| `port` | (Mandatory) The controller port
+| `ssl-enabled` | (Mandatory) Whether or not to use an SSL connection to the controller
+| `tier-name` | (Mandatory) the application's tier name
 
 To provide more complex values such as the `tier-name`, using the interactive mode when creating a user-provided service will manage the character escaping automatically. For example, the default `tier-name` could be set with a value of `Tier-$(expr "$VCAP_APPLICATION" : '.*instance_index[": ]*\([[:digit:]]*\).*')` to calculate a value from the Cloud Foundry instance index.
 
