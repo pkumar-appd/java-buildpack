@@ -16,7 +16,7 @@
 # Configuration for the AppDynamics framework
 ---
 version: 4.2.+
-repository_root: "https://packages.appdynamics.com/AppServerAgent"
+repository_root: "https://packages.appdynamics.com/java"
 default_application_name: 
 default_node_name: $(ruby -e "require 'json' ; a = JSON.parse(ENV['VCAP_APPLICATION']);
   puts \"#{a['application_name']}:#{a['instance_index']}\"")
